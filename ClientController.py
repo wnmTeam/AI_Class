@@ -1,6 +1,5 @@
 import threading
 
-import cv2
 
 from myThread import MyThread
 from DetetctFace import DetectFace

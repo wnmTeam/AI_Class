@@ -14,7 +14,6 @@ def send_recive(imageUrl, type):
     y = json.dumps(x)
     ws.send(y)
     result = json.loads(ws.recv())
-    print('omareeen')
     return result
 
 def main():
@@ -26,14 +25,12 @@ def main():
     controller = Controller()
     sendData = ''
     # data = send_recive( 'C:\\Users\Omar\Desktop\\smartSchoolServer\\frames\\1.jpg', "sendFrame")
-    print('omar')
     while True:
         t = time.time()
         # data = send_recive('', 'getCam')
 
         data = send_recive('', 'getCam')
         frame = cv2.imread(data['data'], cv2.IMREAD_COLOR)
-        print(data['data'])
         sendData = controller.process_frame(frame)
         data = send_recive(data['data'], 'sendFrame')
         print(sendData)

@@ -4,8 +4,9 @@ import time
 import cv2
 
 from myThread import MyThread
-from DetetctFace import DetectFace
-from RecognitionFace import RecognitionFace
+from DetetctFace1 import DetectFace
+from RecognitionFace1 import RecognitionFace
+from
 
 
 class Controller:
